@@ -34,19 +34,21 @@ export default function SideBar() {
       <span className="font-bold text-2xl pb-6 mb-6 border-b border-gray-500 block">
         Cronograma das aulas
       </span>
-      {data?.lessons.map((lesson) => {
-        return (
-          <div className="flex flex-col gap-8">
-            <Lesson
-              key={lesson.id}
-              title={lesson.title}
-              slug={lesson.slug}
-              type={lesson.lessonType}
-              availableAt={new Date(lesson.availableAt)}
-            />
-          </div>
-        );
-      })}
+      <div className="flex flex-col gap-8">
+        {data?.lessons.map((lesson) => {
+          return (
+            <div className="flex flex-col gap-8">
+              <Lesson
+                key={lesson.id}
+                title={lesson.title}
+                slug={lesson.slug}
+                type={lesson.lessonType}
+                availableAt={new Date(lesson.availableAt)}
+              />
+            </div>
+          );
+        })}
+      </div>
     </aside>
   );
 }

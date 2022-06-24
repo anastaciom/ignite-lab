@@ -1,7 +1,7 @@
-import EventPage from "./pages/Event";
+import { Router } from "./Router";
 
 function App() {
-  return <><EventPage/></>
+  return <Router />;
 }
 
 export default App;
