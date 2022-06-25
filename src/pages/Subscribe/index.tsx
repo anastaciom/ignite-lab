@@ -4,7 +4,7 @@ import { IgniteLogo } from "../../assets/IgniteLogo";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 import { useCreateSubscriberMutation } from "../../graphql/generated";
-
+import ImageBackground from "../../../src/assets/imageBackground.png";
 interface IFormData {
   name: string;
   email: string;
@@ -84,11 +84,7 @@ export default function SubscribePage() {
           </form>
         </div>
       </div>
-      <img
-        src="/src/assets/imageBackground.png"
-        className="mt-10"
-        alt="background"
-      />
+      <img src={ImageBackground} className="mt-10" alt="background" />
     </div>
   );
 }
